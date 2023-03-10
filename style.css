@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  background-color: var(--violet);
+  background-image: url("./images/bg-mobile.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  width: 50%;
+  margin: 1.5rem 0 3rem 0;
+}
+
+.header img {
+  width: 100%;
+}
+.design img {
+  width: 100%;
+}
+
+.text {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 2rem;
+  color: white;
+}
+
+.text-header {
+  font-size: clamp(1.6rem, 1rem + 2vw, 3rem);
+}
+
+.text-para {
+  margin: 1rem 0;
+  font-family: "open-sans", sans-serif;
+  font-weight: 300;
+  font-size: clamp(1.2rem, 0.3rem + 0.9vw, 2rem);
+}
+
+.button {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.button button {
+  color: var(--violet);
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+}
+
+.social {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.brand {
+  margin-top: 1rem;
+  border-radius: 50%;
+  width: 90px;
+  height: 0px;
+  text-align: center;
+}
+.brand img {
+  box-shadow: 2px 2px 5px;
+  padding: 0.3rem;
+  width: 50px;
+  height: 50px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+@media (min-width: 740px) {
+  .button {
+    margin: 0 0;
+    width: 35%;
+  }
+  .button button {
+    padding: 1rem 1rem;
+    font-family: "Lalezar", cursive;
+    transition: 0.3s;
+  }
+  .button button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  .header {
+    width: 20%;
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+  .text {
+    text-align: start;
+  }
+  body {
+    height: 100vh;
+    background-image: url(./images/bg-desktop.svg);
+    background-size: cover;
+  }
+  .social {
+    grid-column-start: 2;
+    justify-content: end;
+  }
+  .social > div > img:hover {
+    box-shadow: 10px 10px 10px black;
+  }
+}
